@@ -1,18 +1,21 @@
 // import { useState } from 'react'
 import Header from "./components/Header";
 import Sidenav from "./components/Sidenav";
+import { DataContextProvider } from "./context/DataContext";
 import Resumo from "./pages/Resumo";
 import "./style.css";
 
 function App() {
   return (
-    <div>
-      <Sidenav />
-      <main>
-        <Header />
-        <Resumo />
-      </main>
-    </div>
+    <DataContextProvider>
+      <div>
+        <Sidenav />
+        <main>
+          <Header />
+          <Resumo />
+        </main>
+      </div>
+    </DataContextProvider>
   );
 }
 
