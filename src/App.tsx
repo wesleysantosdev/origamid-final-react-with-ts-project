@@ -1,11 +1,19 @@
 // import { useState } from 'react'
-import './Style.css'
+import Header from "./components/Header";
+import Sidenav from "./components/Sidenav";
+import Resumo from "./pages/Resumo";
+import "./style.css";
 
 function App() {
-
   return (
-    <div></div>
-  )
+    <div>
+      <Sidenav />
+      <main>
+        <Header />
+        <Resumo />
+      </main>
+    </div>
+  );
 }
 
-export default App
+export default App;
